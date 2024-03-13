@@ -28,6 +28,7 @@ const TriviaSetup = (props) => {
           className="w-full bg-gray-100 outline-none py-2 px-4 rounded-sm"
         />
       </div>
+
       <div className="group mt-10">
         <h2 className="font-extrabold text-xl">Step Two</h2>
         <p className="text-sm mb-1">How many questions should I include?</p>
