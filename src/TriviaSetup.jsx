@@ -38,9 +38,11 @@ const TriviaSetup = (props) => {
         { 
           QUESTION_COUNT_OPTIONS.map((number) => (
             <NumOfQBtn 
-            key={number}
-            setQuestionCount={setQuestionCount} 
-            number={number}  />
+              key={number}
+              setQuestionCount={setQuestionCount} 
+              number={number} 
+              isActive={number === questionCount} 
+            />
           ))
         }
         </div>
