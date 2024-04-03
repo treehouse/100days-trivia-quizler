@@ -5,6 +5,8 @@ const TriviaSetup = (props) => {
     props;
   const [inputVal, setInputVal] = useState("");
 
+  const QUESTION_COUNT_OPTIONS = [3, 5, 10];
+
   function startTrivia(userTopic, userNumOfQuestions) {
     console.log(userTopic);
     console.log(userNumOfQuestions);
@@ -33,9 +35,14 @@ const TriviaSetup = (props) => {
         <h2 className="font-extrabold text-xl">Step Two</h2>
         <p className="text-sm mb-1">How many questions should I include?</p>
         <div className="group flex justify-between gap-2">
-          <NumOfQBtn setQuestionCount={setQuestionCount} number={3} />
-          <NumOfQBtn setQuestionCount={setQuestionCount} number={5} />
-          <NumOfQBtn setQuestionCount={setQuestionCount} number={10} />
+        { 
+          QUESTION_COUNT_OPTIONS.map((number) => (
+            <NumOfQBtn 
+            key={number}
+            setQuestionCount={setQuestionCount} 
+            number={number}  />
+          ))
+        }
         </div>
         <button
           onClick={() => {
